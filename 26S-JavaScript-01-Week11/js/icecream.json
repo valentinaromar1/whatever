@@ -1,0 +1,21 @@
+//companyName, headOffice, established, active, topFlavors(name, calories, type, ingredients, image)
+{
+    "companyName": "i-scream company inc",
+    "headOffice": "north pole",
+    "established": 2026,
+    "active": true,
+    "topFlavours": [{
+        "name": "choco mint", 
+        "calories": 200,
+        "type":"icecream",
+        "ingredients": ["chocolate syrup", "peppermint", "vanilla base"],
+        "image": ""
+    }, {
+        "name": "choco mint", 
+        "calories": 300,
+        "type":"icecream",
+        "ingredients": ["chocolate syrup", "peppermint", "vanilla base"],
+        "image": "./images/chocolate-mint.svg"
+    }]
+
+}
