@@ -9,7 +9,7 @@ async function populate() {
 // Introducing JavaScript Object Notation (JSON): https://json.org/
 // STEP 4a: Create i-scream.json file with companyName, headOffice, established, active, topFlavors(name, calories, type, ingredients, image) */
 // STEP 4b: Store the URL of a JSON file in a variable */
-const URL = '' ;
+const url = "https://priyansht.github.io/26S-JavaScript-01-Week11/js/i-scream.json";
 // STEP 5: Use the new URL to create a new request object
 const request = new Request(url);
 console.log(request);
@@ -35,11 +35,11 @@ function populateHeader(json){
     //<h1>
     let h1 = document.createElement("h1");
 
-    let parag = document.createElement("p");
+    let para = document.createElement("p");
     // Grab the company name from the JSON object and use it for the text node
     h1.textContent = json.companyName;
 
-    parag.textContent = `head office: ${json.headOffice}, est: ${json.established}, status: ${json.active ? "Active" : "Inactive"}`;
+    para.textContent = `head office: ${json.headOffice}, est: ${json.established}, status: ${json.active ? "Active" : "Inactive"}`;
     // Inject the complete H1 element into the DOM, inside the HEADER  
     header.appendChild(h1);
     header.appendChild(para);
@@ -47,12 +47,12 @@ function populateHeader(json){
 
 
 /* STEP 10b: Assemble the showTopFlavors() function */
-function showTopFlavors(json){
+function showTopFlavours(json){
     // STEP 10c: Bind the JSON topFlavors object to a var
-    let topFlavors = json.topFlavors;
+    let topFlavours = json.topFlavours;
     // STEP 10d: Loop through the topFlavors object
-    for (let  i = 0; i < topFlavors.length; i++) {
-        console.log(topFlavors[i]);
+    for (let  i = 0; i < topFlavours.length; i++) {
+        console.log(topFlavours[i]);
     
     // STEP 10e: build HTML elements for the content: article, h2, image, p1, p2, list
 
@@ -64,14 +64,14 @@ function showTopFlavors(json){
     let list = document.createElement("ul");//<ul></ul>
 
     // STEP 10f: Set the textContent property for each of the above elements (except the UL), based on the JSON content
-    h2.textContent = topFlavors[i].name;
-    p1.textContent = "calories:" + topFlavors[i].calories;
-    p2.textContent = "type: " +topFlavors[i].type;
+    h2.textContent = topFlavours[i].name;
+    p1.textContent = "calories:" + topFlavours[i].calories;
+    p2.textContent = "type: " + topFlavours[i].type;
     
-    image.setAttribute("src", topFlavors[i].image);
+    image.setAttribute("src", topFlavours[i].image);
 
     // STEP 10g: Build a loop for the ingredients array in the JSON
-    let ingredients = topFlavors[i].ingredients;
+    let ingredients = topFlavours[i].ingredients;
     for (let j = 0; j < ingredients.length; j++) {
        
        let listItem = document.createElement("li");//<li></li>
